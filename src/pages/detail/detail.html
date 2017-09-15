@@ -1,5 +1,5 @@
 <!--
-  Generated template for the HomePage page.
+  Generated template for the DetailPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,17 +7,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>home</ion-title>
+    <ion-title>DetailPage</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-<ion-card *ngFor = "let coach of coaches" (click)=itemTapped(coach)>
+
+	<ion-card *ngFor = "let coach of coachdetail" (click)=itemTapped(coach)>
     <img src="{{coach.picURL}}"/>
     <div class="card-title">{{coach.name}}</div>
-    <div class="card-subtitle">41 Listings</div>
+    <div class="card-subtitle">{{coach.description}}</div>
   </ion-card>
 
 </ion-content>
